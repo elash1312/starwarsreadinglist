@@ -5,21 +5,22 @@ import { useEffect } from "react-router-dom";
 export const CharacterPage = () => {
     const params = useParams();
     const [character, setCharacter] = React.useState(null)
-
+    console.log(character);
     React.useEffect(() => {
-        const fn = asynch() => {
+        const fn = async () => {
             const response = await fetch(
-                "https://www.swapi.dev/api/people/1/" + params.id
+                "https://swapi.dev/api/people/" + params.id
             );
-            const payload = response.json();
-            setCharacter(payload.result.properties);
+            const payload = await response.json();
+            setCharacter(payload);
         };
         fn();
     }, []);
 
     return (
         <div>
-            <h1>Character Page {params.id} </h1>
+            {character == null ? <h1>Loading...</h1> : <> <h1> {character.name} </h1>
+                <p>Mass: {character.mass}</p></>}
         </div>
     );
 };
