@@ -19,7 +19,7 @@ const Layout = () => {
 	const basename = process.env.BASENAME || "";
 
 	return (
-		<div>
+		<div className="layout">
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
 					<Navbar />
@@ -28,6 +28,7 @@ const Layout = () => {
 							<Home />
 						</Route>
 						<Route exact path="/character/:id">
+							<div><h1>Characters</h1></div>
 							<CharacterPage />
 						</Route>
 						<Route exact path="/vehicle/:id">
