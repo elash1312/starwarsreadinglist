@@ -7,4 +7,13 @@
 img:hover {
     opacity: 0.5;
   }
-  
+.card-img-top {
+    height: 100px;
+    margin-left: 1rem;
+
+}
+.favs {
+    color:whitesmoke;
+    background: darkblue;
+    margin-right: 1rem;
+}

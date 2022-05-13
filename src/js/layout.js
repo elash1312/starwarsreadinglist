@@ -19,7 +19,7 @@ const Layout = () => {
 	const basename = process.env.BASENAME || "";
 
 	return (
-		<div className="layout">
+		<div className="layout text-primary">
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
 					<Navbar />
@@ -28,24 +28,27 @@ const Layout = () => {
 							<Home />
 						</Route>
 						<Route exact path="/character/:id">
-							<div><h1>Characters</h1></div>
-							<CharacterPage />
-						</Route>
-						<Route exact path="/vehicle/:id">
-							<h1>Vehicle Page</h1>
-						</Route>
-						<Route exact path="/planets/:id">
-							<PlanetPage />
-						</Route>
-						<Route>
-							<h1>Not found!</h1>
-						</Route>
-					</Switch>
-					<Footer />
-				</ScrollToTop>
-			</BrowserRouter>
-		</div>
-	);
+							{/* <div class="p-5 mb-4 bg-light rounded-3"> I tried to wrap this in a jumbotron, not working
+								<div class="container-fluid py-5"> */}
+									<h1 class="display-5 fw-bold">Characters</h1>
+									<CharacterPage />
+									{/* </div></div> */}
+								</Route>
+								<Route exact path="/vehicle/:id">
+									<h1>Vehicle Page</h1>
+								</Route>
+								<Route exact path="/planets/:id">
+									<PlanetPage />
+								</Route>
+								<Route>
+									<h1>Not found!</h1>
+								</Route>
+							</Switch>
+							<Footer />
+						</ScrollToTop>
+					</BrowserRouter>
+				</div>
+				);
 };
 
-export default injectContext(Layout);
+				export default injectContext(Layout);
