@@ -14,7 +14,20 @@ export const Home = () => {
 			const payload = await response.json();
 			setCharacters(payload.results);
 		};
-		fn();
+        fn();
+	}, []);
+
+	const [planet, setPlanet] = React.useState(null)
+    console.log(planet);
+    React.useEffect(() => {
+        const fn = async () => {
+            const response = await fetch(
+                "https://swapi.dev/api/planets/" + params.id
+            );
+            const payload = await response.json();
+            setPlanet(payload);
+        };
+        fn();
 	}, []);
 
 	return (
