@@ -3,6 +3,7 @@ import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
 import { CharacterCard } from "../component/charactercard.js"
 import { PlanetCard } from "../component/planetcard";
+import { StarshipCard } from "../component/starshipcard";
 
 export const Home = () => {
 	const [characters, setCharacters] = React.useState([]);
@@ -31,6 +32,19 @@ export const Home = () => {
 		fn();
 	}, []);
 
+	const [starship, setStarship] = React.useState([])
+    console.log(starship);
+    React.useEffect(() => {
+        const fn = async () => {
+            const response = await fetch(
+                "https://swapi.dev/api/starships/"
+            );
+            const payload = await response.json();
+            setStarship(payload.results);
+        };
+        fn();
+    }, []);
+
 	return (
 		<><div className="container">
 			<ul className="row">
@@ -45,6 +59,15 @@ export const Home = () => {
 							{planet.map((item, index) => {
 								return (
 									<PlanetCard obj={item} key={index} id={index + 1} />
+								);
+							})}
+						</ul>
+					</div>
+					<div className="container">
+						<ul className="row">
+							{starship.map((item, index) => {
+								return (
+									<StarshipCard obj={item} key={index} id={index + 1} />
 								);
 							})}
 						</ul>
