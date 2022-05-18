@@ -7,13 +7,36 @@
 img:hover {
     opacity: 0.5;
   }
-.card-img-top {
+.logo {
     height: 100px;
     margin-left: 1rem;
 
+}
+.card-image-top {
+    height: 200px;
+    width: 400px;
+}
+.p.card-text {
+    width: 30rem;
 }
 .favs {
     color:rgb(223, 184, 58);
     background: rgb(104, 8, 8);
     margin-right: 1rem;
+}
+.btn {
+    color:rgb(223, 184, 58);
+    background: rgb(104, 8, 8);
+    margin-right: 1rem;
+}
+.row {
+    /* background-color: #333; */
+    color: rgb(129, 9, 9);
+    overflow: auto;
+    white-space: nowrap;
+    height: 500px;
+    width: 1400px;  
+} 
+.titles {
+    color: rgb(223, 184, 58);
 }

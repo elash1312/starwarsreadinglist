@@ -29,11 +29,8 @@ const Layout = () => {
 							<Home />
 						</Route>
 						<Route exact path="/character/:id">
-							{/* <div class="p-5 mb-4 bg-light rounded-3"> I tried to wrap this in a jumbotron, not working
-								<div class="container-fluid py-5"> */}
 									<h1 class="display-5 fw-bold">Characters</h1>
 									<CharacterPage />
-									{/* </div></div> */}
 								</Route>
 								<Route exact path="/starships/:id">
 									<h1>Starships Page</h1>

@@ -47,6 +47,7 @@ export const Home = () => {
 
 	return (
 		<><div className="container">
+			<h1 className="titles">Characters</h1>
 			<ul className="row">
 				{characters.map((item, index) => {
 					return (
@@ -55,6 +56,7 @@ export const Home = () => {
 				})}
 			</ul>
 		</div><div className="container">
+		<h1 className="titles">Planets</h1>
 						<ul className="row">
 							{planet.map((item, index) => {
 								return (
@@ -64,6 +66,7 @@ export const Home = () => {
 						</ul>
 					</div>
 					<div className="container">
+					<h1 className="titles">Starships</h1>
 						<ul className="row">
 							{starship.map((item, index) => {
 								return (
