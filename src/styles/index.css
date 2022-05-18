@@ -16,9 +16,6 @@ img:hover {
     height: 200px;
     width: 400px;
 }
-.p.card-text {
-    width: 30rem;
-}
 .favs {
     color:rgb(223, 184, 58);
     background: rgb(104, 8, 8);
