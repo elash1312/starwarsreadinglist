@@ -21,6 +21,10 @@ img:hover {
     background: rgb(104, 8, 8);
     margin-right: 1rem;
 }
+.addtofavs {
+    margin-right: 0;
+    margin-left: 16.5rem;
+}
 .btn {
     color:rgb(223, 184, 58);
     background: rgb(104, 8, 8);
@@ -29,10 +33,9 @@ img:hover {
 .row {
     /* background-color: #333; */
     color: rgb(129, 9, 9);
-    overflow: auto;
-    white-space: nowrap;
-    height: 500px;
-    width: 1400px;  
+    overflow-x: scroll;
+    overflow-y: hidden; 
+    flex-wrap: nowrap;
 } 
 .titles {
     color: rgb(223, 184, 58);

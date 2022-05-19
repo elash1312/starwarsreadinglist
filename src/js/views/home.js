@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
 import { CharacterCard } from "../component/charactercard.js"
 import { PlanetCard } from "../component/planetcard";
 import { StarshipCard } from "../component/starshipcard";
+import { Context } from "../store/appContext";
 
 export const Home = () => {
+	const { store, actions }= useContext(Context);
 	const [characters, setCharacters] = React.useState([]);
-	console.log(characters);
 	React.useEffect(() => {
 		const fn = async () => {
 			const response = await fetch(
@@ -20,7 +21,6 @@ export const Home = () => {
 	}, []);
 
 	const [planet, setPlanet] = React.useState([])
-	console.log(planet);
 	React.useEffect(() => {
 		const fn = async () => {
 			const response = await fetch(
@@ -33,7 +33,6 @@ export const Home = () => {
 	}, []);
 
 	const [starship, setStarship] = React.useState([])
-    console.log(starship);
     React.useEffect(() => {
         const fn = async () => {
             const response = await fetch(
@@ -47,11 +46,12 @@ export const Home = () => {
 
 	return (
 		<><div className="container">
+			<button onClick={() => console.log(actions.favorites)}>text</button>  
 			<h1 className="titles">Characters</h1>
 			<ul className="row">
 				{characters.map((item, index) => {
 					return (
-						<CharacterCard obj={item} key={index} id={index + 1} />
+						<div className="col"><CharacterCard obj={item} key={index} id={index + 1} addFavorite = {actions.addFavorite}/></div>
 					);
 				})}
 			</ul>
@@ -60,17 +60,17 @@ export const Home = () => {
 						<ul className="row">
 							{planet.map((item, index) => {
 								return (
-									<PlanetCard obj={item} key={index} id={index + 1} />
+									<div className="col"><PlanetCard obj={item} key={index} id={index + 1} addFavorite = {actions.addFavorite}/></div>
 								);
 							})}
 						</ul>
 					</div>
-					<div className="container">
+					<div className="container"> 
 					<h1 className="titles">Starships</h1>
 						<ul className="row">
 							{starship.map((item, index) => {
 								return (
-									<StarshipCard obj={item} key={index} id={index + 1} />
+									<div className="col"><StarshipCard obj={item} key={index} id={index + 1} addFavorite = {actions.addFavorite}/></div>
 								);
 							})}
 						</ul>
