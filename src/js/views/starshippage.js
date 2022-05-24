@@ -22,7 +22,10 @@ export const StarshipPage = () => {
         " className="card-img-top" alt="..." /></div>
         <div>
             {starship == null ? <h1>Loading...</h1> : <> <h1> {starship.name} </h1>
-                <p>Mass: {starship.max_atmosphering_speed}</p></>}
+                <p>Model: {starship.model}</p>
+                <p>Max Atmosphering Speed: {starship.max_atmosphering_speed}</p>
+                <p>Manufacturer: {starship.manufacturer}</p>
+                <p>Hyperdrive Rating: {starship.hyperdrive_rating}</p></>}
         </div>
         </>
     );

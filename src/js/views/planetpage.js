@@ -22,7 +22,10 @@ export const PlanetPage = () => {
         " className="card-img-top" alt="..." /></div>
         <div>
             {planet == null ? <h1>Loading...</h1> : <> <h1> {planet.name} </h1>
-                <p>Mass: {planet.films}</p></>}
+                <p>Climate: {planet.climate}</p>
+                <p>Terrain: {planet.terrain}</p>
+                <p>Rotation Period: {planet.rotation_period}</p>
+                <p>Orbital Period: {planet.orbital_period}</p></>}
         </div>
         </>
     );
