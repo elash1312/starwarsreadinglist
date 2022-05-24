@@ -46,7 +46,6 @@ export const Home = () => {
 
 	return (
 		<><div className="container">
-			<button onClick={() => console.log(actions.favorites)}>text</button>  
 			<h1 className="titles">Characters</h1>
 			<ul className="row">
 				{characters.map((item, index) => {

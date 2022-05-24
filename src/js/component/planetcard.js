@@ -12,7 +12,7 @@ export const PlanetCard = (props) => {
                 <h5 className="card-title">{props.obj.name}</h5>
                 <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <Link to={`/planets/${props.id}`}><button className="btn">Learn More</button></Link>
-                <button className="btn addtofavs">♡</button>
+                <button onClick ={ () => props.addFavorite(props.obj)} className="btn addtofavs">♡</button>
             </div>
         </div>
         </>

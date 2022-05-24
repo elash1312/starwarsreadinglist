@@ -15,9 +15,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 				/**
 					fetch().then().then(data => setStore({ "foo": data.bar }))
 				*/
+			},
+			removeFavorite: (index) => {
+					const store = getStore();
+					store.favorites = store.favorites.filter((item, i) => index != i)
+					setStore(store);
 			}
 		}
 	};
 };
 
 export default getState;
+

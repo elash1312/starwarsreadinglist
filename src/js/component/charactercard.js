@@ -13,6 +13,7 @@ export const CharacterCard = (props) => {
                     <p className="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     <Link to={`/character/${props.id}`}><button className="btn">Learn More</button></Link>
                     <button onClick={() => props.addFavorite(props.obj)} className="btn addtofavs">♡</button>
+                    
                 </div>
             </div>
         </>
