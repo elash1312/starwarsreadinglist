@@ -18,10 +18,13 @@ export const PlanetPage = () => {
     }, []);
 
     return (
+        <><div className="charpic"><img src="http://via.placeholder.com/800x600
+        " className="card-img-top" alt="..." /></div>
         <div>
             {planet == null ? <h1>Loading...</h1> : <> <h1> {planet.name} </h1>
                 <p>Mass: {planet.films}</p></>}
         </div>
+        </>
     );
 };
 

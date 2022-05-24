@@ -10,7 +10,7 @@ export const CharacterCard = (props) => {
 " className="card-img-top" alt="..." />
                 <div className="card-body bg-dark">
                     <h5 className="card-title">{props.obj.name}</h5>
-                    <p className="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p className="card-text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Venenatis tellus in metus vulputate eu scelerisque felis.</p>
                     <Link to={`/character/${props.id}`}><button className="btn">Learn More</button></Link>
                     <button onClick={() => props.addFavorite(props.obj)} className="btn addtofavs">♡</button>
                     

@@ -40,3 +40,10 @@ img:hover {
 .titles {
     color: rgb(223, 184, 58);
 }
+.charpic {
+    height: 600px;
+    width: 800px
+}
+p.card-text {
+    margin-bottom: 0px;
+}

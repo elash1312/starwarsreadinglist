@@ -33,10 +33,11 @@ const Layout = () => {
 									<CharacterPage />
 								</Route>
 								<Route exact path="/starships/:id">
-									<h1>Starships Page</h1>
+								<h1 class="display-5 fw-bold">Starships</h1>
 									<StarshipPage />
 								</Route>
 								<Route exact path="/planets/:id">
+								<h1 class="display-5 fw-bold">Planets</h1>
 									<PlanetPage />
 								</Route>
 								<Route>

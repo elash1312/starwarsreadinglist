@@ -18,10 +18,13 @@ export const StarshipPage = () => {
     }, []);
 
     return (
+        <><div className="charpic"><img src="http://via.placeholder.com/800x600
+        " className="card-img-top" alt="..." /></div>
         <div>
             {starship == null ? <h1>Loading...</h1> : <> <h1> {starship.name} </h1>
                 <p>Mass: {starship.max_atmosphering_speed}</p></>}
         </div>
+        </>
     );
 };
 

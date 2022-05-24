@@ -18,9 +18,14 @@ export const CharacterPage = () => {
     }, []);
 
     return (
+        <><div className="charpic"><img src="http://via.placeholder.com/800x600
+        " className="card-img-top" alt="..." /></div>
         <div>
             {character == null ? <h1>Loading...</h1> : <> <h1> {character.name} </h1>
-                <p>Mass: {character.mass}</p></>}
+                <p>Height: {character.height}</p>
+                <p>Eye Color: {character.eye_color}</p>
+                <p>Hair Color: {character.hair_color}</p></>}
         </div>
+        </>
     );
 };
